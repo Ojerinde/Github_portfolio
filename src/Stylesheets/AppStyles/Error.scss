@@ -1,0 +1,38 @@
+.error__box {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  @include flex-center;
+  width: 25% ;
+  height: 70vh;
+  background-color: rgba(243, 62, 237, 0.733) ;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  backdrop-filter: blur(.2rem);
+  z-index: 10;
+  animation: errorAnimation .5s linear;
+}
+.error__message {
+  color: rgb(67, 62, 62);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@keyframes errorAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.close__message {
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+  fill: rgb(62, 59, 62);
+  height: 0.9rem;
+  height: 0.9rem;
+  cursor: pointer;
+}
