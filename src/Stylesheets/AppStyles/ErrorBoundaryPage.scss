@@ -34,3 +34,15 @@
     padding: 1.3rem 2rem;
   }
 }
+
+@media only screen and (max-width: $bp--medium) {
+  .error__boundary--page {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: $bp--small) {
+  .error__boundary--page {
+    width: 90%;
+  }
+}
