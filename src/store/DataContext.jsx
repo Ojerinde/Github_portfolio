@@ -16,7 +16,6 @@ const DataContextProvider = (props) => {
     const formattedData = data.reverse().map((repo, index) => {
       return { ...repo, number: index };
     });
-    console.log(formattedData);
     setFetchedRepo(formattedData);
   }, []);
   const addUserHandler = useCallback((data) => {

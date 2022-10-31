@@ -7,7 +7,7 @@ const Header = () => {
         </h1>
         <p>
           I am a Software Engineer <span>and</span> <br /> an Electrical and
-          Electronics Engineer
+          Electronics Engineer.
         </p>
       </div>
     </header>

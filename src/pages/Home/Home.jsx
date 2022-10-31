@@ -4,7 +4,6 @@ import Navigations from "../../components/Navigation/Navigation";
 import Repositories from "../../components/Repository/Repositories";
 import UserDetails from "../../components/UserDetails/UserDetails";
 
-
 const Home = () => {
   return (
     <>

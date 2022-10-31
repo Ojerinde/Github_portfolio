@@ -1,0 +1,105 @@
+.go__home {
+  width: 15rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  & svg {
+    height: 3.5rem;
+    width: 3.5rem;
+    fill: $primary-light-color;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      fill: $primary-color;
+    }
+  }
+  & p {
+    font-size: 2.5rem;
+    color: $primary-light-color;
+    letter-spacing: 0.1rem;
+  }
+}
+.repo__full--details {
+  box-shadow: $box-shadow;
+  padding: 4rem 6rem;
+  width: 80%;
+  margin: 2rem auto;
+
+  & h4 {
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  & h4::first-letter {
+    color: $primary-light-color;
+  }
+
+  & div:not(:last-child) {
+    margin-bottom: 3.5rem;
+  }
+
+  & div {
+    & label {
+      font-size: 2rem;
+      color: $primary-color;
+      padding: 0.3rem 0.8rem;
+      border-radius: 0.4rem;
+      border: 0.1rem solid $primary-light-color;
+    }
+
+    & h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      color: $primary-light-color;
+      margin-top: 0.8rem;
+    }
+    & h5 {
+      margin-top: 1.5rem;
+      font-size: 2.1rem;
+      color: $primary-light-color;
+      letter-spacing: 0.2rem;
+      font-weight: 400;
+    }
+
+    & a:link,
+    & a:visited {
+      margin-left: 0.9rem;
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+      color: $primary-color;
+      text-decoration: none;
+      font-weight: 400;
+      letter-spacing: 0.3rem;
+      display: inline-block;
+      padding-bottom: 0.2rem;
+      border-bottom: 0.15rem solid $primary-color;
+      transition: all 0.3s;
+    }
+
+    & a:hover {
+      color: $primary-light-color;
+      border-bottom: 0.15rem solid transparent;
+    }
+  }
+
+  & ul {
+    margin-top: 6rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    & li {
+      margin-top: 1.5rem;
+      font-size: 1.7rem;
+      color: $primary-light-color;
+      letter-spacing: 0.2rem;
+      font-weight: 400;
+    }
+  }
+}

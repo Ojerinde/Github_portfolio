@@ -6,6 +6,8 @@ import { ErrorBoundary } from "react-error-boundary";
 import { ImSpinner4 } from "react-icons/im";
 
 import AppHome from "./pages/Home/AppHome";
+import ErrorBoundaryPage from "./pages/ErrorBoundaryPage/ErrorBoundaryPage";
+import Button from "./components/UI/Button/Button";
 
 // Dynamic Imports
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -18,7 +20,7 @@ const ErrorFallback = (props) => {
     <div role="alert" className="boundary__error">
       <p>Something went wrong!</p>
       <pre>{props.error.message}</pre>
-      <button onClick={props.resetErrorBoundary}>Try again</button>
+      <Button onClick={props.resetErrorBoundary}>Restart app</Button>
     </div>
   );
 };
@@ -48,7 +50,7 @@ const App = () => {
             <Route path=":id" element={<RepoDetails />} />
           </Route>
 
-          <Route path="/errorboundary" element={<div>An error</div>} />
+          <Route path="/errorboundary" element={<ErrorBoundaryPage />} />
           <Route path="/nopage" element={<ErrorPage />} />
 
           {/* Error Page */}

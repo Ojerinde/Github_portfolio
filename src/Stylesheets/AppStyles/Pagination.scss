@@ -56,14 +56,18 @@
   fill: rgba($primary-color, 0.8) !important;
 }
 
-@media only screen and (max-width: $bp--large) {
+@media only screen and (max-width: $bp--medium) {
   .pagination {
-    &__icons--box {
-      flex-basis: 25%;
+    &__card {
+      width: 55%;
     }
+  }
+}
 
-    &__buttons {
-      flex-basis: 70%;
+@media only screen and (max-width: $bp--small) {
+  .pagination {
+    &__card {
+      width: 65%;
     }
   }
 }

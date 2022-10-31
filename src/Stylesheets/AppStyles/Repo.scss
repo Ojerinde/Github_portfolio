@@ -13,6 +13,13 @@
     color: $secondary-dark-color;
   }
 }
+.no__repo {
+  background-color: $primary-light-color;
+  padding: 4rem ;
+  text-align: center;
+  color: $secondary-color;
+  font-size: 4rem;
+}
 
 .repo {
   padding: 3rem 5rem;

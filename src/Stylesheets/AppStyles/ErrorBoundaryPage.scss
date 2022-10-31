@@ -1,0 +1,36 @@
+.error__boundary--title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+  color: $primary-light-color;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.2rem;
+  margin: 3rem;
+}
+
+.error__boundary--page {
+  width: 70%;
+  margin: 5rem auto;
+  padding: 6rem 3rem;
+  text-align: center;
+
+  & h1 {
+    font-size: 3rem;
+    color: $primary-color;
+    margin-bottom: 3rem;
+    letter-spacing: 0.2rem;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  & h2 {
+    font-size: 2rem;
+    color: $primary-light-color;
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem;
+  }
+
+  button {
+    font-size: 2rem;
+    padding: 1.3rem 2rem;
+  }
+}

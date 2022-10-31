@@ -8,8 +8,10 @@ const ErrorPage = () => {
     navigate("/");
   };
   return (
-    <Card className="error__card">
-      <h2>Ooops! There is nothing here</h2>
+    <Card className="nopage__card">
+      <h1>404 page!</h1>
+      <h2>You are seeing this page because you are not in a valid URL</h2>
+      <h3>Kindly go back to a valid url by clicking on the button below</h3>
       <Button onClick={goHomeHandler}>Go home</Button>
     </Card>
   );

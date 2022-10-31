@@ -47,10 +47,9 @@ const Footer = () => {
         </ul>
       </div>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut laborum
-        eos ipsa at necessitatibus, totam sit iusto reprehenderit blanditiis
-        quae, beatae corrupti omnis voluptatem atque eveniet cum adipisci
-        dolorem esse.
+        ©Ojerinde Joel. You are 100% allowed to used this webpage
+        for both personal and commercial use. A credit to the original author is
+        highly appreciated.
       </p>
     </footer>
   );

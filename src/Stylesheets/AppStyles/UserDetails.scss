@@ -3,10 +3,12 @@
   padding: 8rem 1rem;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
 
   & div {
     text-align: center;
+    margin-bottom: 1.5rem;
 
     & h2 {
       font-size: 3rem;
@@ -18,5 +20,12 @@
       letter-spacing: 0.1rem;
       color: $primary-color;
     }
+
+    & h4 {
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+      color: $primary-light-color;
+    }
   }
 }
+
