@@ -1,67 +1,59 @@
 .pagination {
   &__card {
-    width: 80%;
-    margin: 2rem auto 1rem auto;
+    width: 40%;
+    margin: 4rem auto 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  &__icons--box {
-    flex-basis: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+
   &__icons--prev,
   &__icons--next {
-    height: 2rem;
-    width: 2rem;
-    fill: #443443;
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: $secondary-color;
     cursor: pointer;
 
     &:hover {
-      fill: #75466e;
+      fill: $secondary-light-color;
     }
-  }
-
-  &__icons--paragraph {
-    font-size: 2rem;
-    font-weight: 500;
-    color: rgba(33, 34, 34, 0.916);
   }
 
   &__buttons {
     flex-basis: 80%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 
-    & button {
-      text-align: center;
-      padding: 0.5rem 1rem;
-      margin: 0 0.3rem 0.3rem 0.3rem;
-      font-size: 1rem;
-      background-color: rgba(17, 41, 41, 0.748);
-      color: #f48ce6;
-      border-radius: 0.5rem;
-      border: 0.2rem solid transparent;
+    & .icon {
+      height: 3rem;
+      width: 3rem;
+      fill: $secondary-dark-color;
+      cursor: pointer;
 
       &:hover {
-        border: 0.2rem solid rgb(241, 43, 224);
-        background-color: #75466a;
+        fill: #75466a;
+        fill-opacity: 0.6;
       }
+    }
 
-      &:focus {
-        border: 0.2rem solid rgb(206, 36, 203);
-      }
+    & .icon__active {
+      fill: rgb(51, 50, 50);
     }
   }
 }
-
+.box {
+  position: relative;
+}
+.icon__text {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
 .not__allowed {
   cursor: not-allowed !important;
-  fill: rgb(213, 167, 211) !important;
+  fill: rgba($primary-color, 0.8) !important;
 }
 
 @media only screen and (max-width: $bp--large) {

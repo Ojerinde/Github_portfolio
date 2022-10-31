@@ -32,23 +32,15 @@ const useFetch = () => {
           body: requestConfig.body ? JSON.stringify(requestConfig.body) : null,
           headers: requestConfig.headers ? requestConfig.headers : {},
         });
+
         if (!response.ok) {
           throw new Error(`${requestConfig.errorMessage}`);
         }
+
         const responseBody = await response.json();
 
-        const transformedBody = {
-          questions: [],
-        };
-
-        for (const key in responseBody) {
-          transformedBody.questions.push({
-            description: responseBody[key].question,
-            tag: responseBody[key].title,
-            id: key.toString(),
-          });
-        }
-        getQuestionsFromRequest(transformedBody);
+        getQuestionsFromRequest(responseBody);
+        
       } catch (err) {
         dispatchFn({
           type: "ERROR",

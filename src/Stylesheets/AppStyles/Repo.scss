@@ -1,0 +1,62 @@
+.repo__box {
+  margin-top: 3rem;
+  background-color: $primary-light-color;
+  padding: 4rem 2rem 6rem;
+  & h4 {
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+    color: $secondary-light-color;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  & h4::first-letter {
+    color: $secondary-dark-color;
+  }
+}
+
+.repo {
+  padding: 3rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  & div {
+    flex-basis: 70%;
+
+    & h3 {
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem;
+      color: $primary-dark-color;
+    }
+
+    & p {
+      margin: 2rem 0;
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+      color: $primary-color;
+      & span {
+        color: $primary-dark-color;
+        font-size:2.5rem;
+      }
+    }
+    & button {
+      font-size: 1.8rem;
+      border-radius: 0.3rem;
+    }
+  }
+  & h1 {
+    flex-basis: 20%;
+    font-size: 7rem;
+    letter-spacing: 0.2rem;
+    color: $primary-light-color;
+    drop-shadow: $box-shadow;
+    text-align: center;
+  }
+}
+.left__repo {
+  background-color: $secondary-light-color;
+}
+.right__repo {
+  background-color: $secondary-color;
+}

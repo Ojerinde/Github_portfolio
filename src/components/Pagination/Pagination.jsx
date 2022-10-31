@@ -1,16 +1,15 @@
 import { useState } from "react";
+import { BsCircleFill } from "react-icons/bs";
 import { ImPrevious, ImNext } from "react-icons/im";
-import Card from "../UI/Card/Card";
-
 
 const Pagination = (props) => {
-  const questionPerPage = props.questionPerPage;
-  const totalQuestions = props.totalQuestions;
-  
-  const total_pages = Math.ceil(totalQuestions / questionPerPage);
+  const repoPerPage = props.repoPerPage;
+  const totalRepo = props.totalRepo;
+
+  const total_pages = Math.ceil(totalRepo / repoPerPage);
 
   const [page, setPage] = useState(1);
-  
+
   const prevHandler = () => {
     if (page === 1) return;
     setPage((page) => page - 1);
@@ -22,39 +21,38 @@ const Pagination = (props) => {
     setPage((page) => page + 1);
     props.onChange(page + 1);
   };
+
+  const iconHandler = (num) => {
+    props.onChange(num);
+    setPage((page) => num);
+  };
+
   return (
-    <Card className="pagination__card">
-      <div className="pagination__icons--box">
-        <ImPrevious
-          onClick={prevHandler}
-          className={`pagination__icons--prev ${
-            page === 1 ? " not__allowed" : ""
-          }`}
-        />
-        <p className="pagination__icons--paragraph">{page}</p>
-        <ImNext
-          onClick={nextHandler}
-          className={`pagination__icons--next ${
-            page === total_pages || total_pages < 1 ? " not__allowed" : ""
-          }`}
-        />
-      </div>
+    <div className="pagination__card">
+      <ImPrevious
+        onClick={prevHandler}
+        className={`pagination__icons--prev ${
+          page === 1 ? " not__allowed" : ""
+        }`}
+      />
       <div className="pagination__buttons">
         {Array.from({ length: total_pages }, (_, index) => index + 1).map(
           (each) => (
-            <button
+            <BsCircleFill
+              className={`${page === each ? "icon icon__active" : "icon"}`}
               key={each}
-              onClick={() => {
-                props.onChange(each);
-                setPage((page) => each);
-              }}
-            >
-              {each}
-            </button>
+              onClick={iconHandler.bind(null, each)}
+            />
           )
         )}
       </div>
-    </Card>
+      <ImNext
+        onClick={nextHandler}
+        className={`pagination__icons--next ${
+          page === total_pages || total_pages < 1 ? " not__allowed" : ""
+        }`}
+      />
+    </div>
   );
 };
 export default Pagination;

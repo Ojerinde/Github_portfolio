@@ -1,12 +1,15 @@
 import { lazy, Suspense } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+
 import { ErrorBoundary } from "react-error-boundary";
 
 import { ImSpinner4 } from "react-icons/im";
 
+import AppHome from "./pages/Home/AppHome";
+
 // Dynamic Imports
 const Home = lazy(() => import("./pages/Home/Home"));
-
+const RepoDetails = lazy(() => import("./components/Repository/RepoDetails"));
 const ErrorPage = lazy(() => import("./pages/ErrorPage/ErrorPage"));
 
 // Error Boundary FallbackComponent
@@ -38,7 +41,15 @@ const App = () => {
         }
       >
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route path="/" element={<Navigate to="/home" />} />
+
+          <Route path="/home" element={<AppHome />}>
+            <Route path="" element={<Home />} />
+            <Route path=":id" element={<RepoDetails />} />
+          </Route>
+
+          <Route path="/errorboundary" element={<div>An error</div>} />
+          <Route path="/nopage" element={<ErrorPage />} />
 
           {/* Error Page */}
           <Route path="*" element={<ErrorPage />} />

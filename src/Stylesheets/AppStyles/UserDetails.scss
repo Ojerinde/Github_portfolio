@@ -1,0 +1,22 @@
+.user__details {
+  background-color: $secondary-light-color;
+  padding: 8rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  & div {
+    text-align: center;
+
+    & h2 {
+      font-size: 3rem;
+      letter-spacing: 0.2rem;
+      color: $primary-light-color;
+    }
+    & h3 {
+      font-size: 2.5rem;
+      letter-spacing: 0.1rem;
+      color: $primary-color;
+    }
+  }
+}
