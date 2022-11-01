@@ -10,18 +10,23 @@ import RightAlignedRepo from "./RightRepo";
 const repoPerPage = 5;
 
 const Repositories = () => {
+  // Consuming created context
   const { repos } = useContext(DataContext);
+
+  // Managing the page rendered
   const [start, setStart] = useState(0);
   const end = start + repoPerPage;
 
+  // A function to update page number
   const pageHandler = (page) => {
     setStart((prev) => page * repoPerPage - repoPerPage);
   };
 
+  // Consuming useFetch custom hook
   const { isLoading, error } = useFetch();
 
+  // API loading state
   if (isLoading) return <LoadingSpinner />;
-
   return (
     <ul className="repo__box">
       <h4>My repositories</h4>

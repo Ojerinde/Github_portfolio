@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+
 import Button from "../UI/Button/Button";
 
 const RightAlignedRepo = (props) => {
@@ -11,7 +12,7 @@ const RightAlignedRepo = (props) => {
       <div>
         <h3>{props.name}</h3>
         <p>
-          {props.description.slice(0, 100)}
+          {props.description?.slice(0, 100)}
           <span>...</span>
         </p>
         <Button onClick={buttonHandler}>See more details</Button>

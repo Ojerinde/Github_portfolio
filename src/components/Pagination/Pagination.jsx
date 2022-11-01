@@ -6,15 +6,19 @@ const Pagination = (props) => {
   const repoPerPage = props.repoPerPage;
   const totalRepo = props.totalRepo;
 
+  // Calculating the no of pages
   const total_pages = Math.ceil(totalRepo / repoPerPage);
 
   const [page, setPage] = useState(1);
 
+  // A function handling moving to the previous stage
   const prevHandler = () => {
     if (page === 1) return;
     setPage((page) => page - 1);
     props.onChange(page - 1);
   };
+
+  // A function handling moving to the previous stage
   const nextHandler = () => {
     if (page === total_pages) return;
 
@@ -22,6 +26,7 @@ const Pagination = (props) => {
     props.onChange(page + 1);
   };
 
+  // A function handling page setting by the icons
   const iconHandler = (num) => {
     props.onChange(num);
     setPage((page) => num);

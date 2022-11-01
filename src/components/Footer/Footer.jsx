@@ -13,7 +13,7 @@ const Footer = () => {
             <Link to="/errorboundary">Test Error Boundary</Link>
           </li>
           <li>
-            <Link to="/nopage">Test 404 page</Link>
+            <Link to="/404page">Test 404 page</Link>
           </li>
         </ul>
         <ul className="right">

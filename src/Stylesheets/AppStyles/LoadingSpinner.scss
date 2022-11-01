@@ -7,8 +7,8 @@
     @include flex-center;
   }
   &__spinner {
-    height: 3rem;
-    width: 3rem;
+    height: 4.5rem;
+    width: 4.5rem;
     fill: $primary-color;
     animation: spinner 2s linear infinite;
   }

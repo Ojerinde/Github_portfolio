@@ -3,6 +3,7 @@
   font-size: 4rem;
   font-weight: 600;
   color: $primary-light-color;
+  font-family: 'Source Serif Pro', serif;
   word-spacing: 0.2rem;
   letter-spacing: 0.2rem;
   margin: 3rem;
@@ -19,13 +20,14 @@
     color: $primary-color;
     margin-bottom: 3rem;
     letter-spacing: 0.2rem;
-    font-family: "Times New Roman", Times, serif;
+   font-family: 'Source Serif Pro', serif;
   }
 
   & h2 {
     font-size: 2rem;
     color: $primary-light-color;
     letter-spacing: 0.1rem;
+    line-height: 1.6;
     margin-bottom: 3rem;
   }
 

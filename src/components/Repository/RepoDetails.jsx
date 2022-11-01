@@ -1,15 +1,23 @@
-import { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+
+import { useContext } from "react";
 import { DataContext } from "../../store/DataContext";
-import { ImPrevious } from "react-icons/im";
+
+import { BsBackspaceFill } from "react-icons/bs";
+
 import useDate from "../../hooks/useDate";
 
 const RepoDetails = () => {
   const navigate = useNavigate();
+
+  // Getting the repo id from the url
   const { id } = useParams();
+  // Consuming the created datacontext
   const { repos } = useContext(DataContext);
+  // Getting the full object of the id gotten
   const repo = repos.find((repo) => repo.id === +id);
 
+  // Formatting the data using the useDate function
   const created = useDate(repo.created_at);
   const pushed = useDate(repo.pushed_at);
   const updated = useDate(repo.updated_at);
@@ -17,7 +25,7 @@ const RepoDetails = () => {
   return (
     <>
       <div className="go__home">
-        <ImPrevious onClick={() => navigate("/home")} />
+        <BsBackspaceFill onClick={() => navigate("/home")} />
         <p>Back</p>
       </div>
       <section className="repo__full--details">
@@ -51,18 +59,18 @@ const RepoDetails = () => {
           <a href={`${repo.html_url}`} target='_blank' rel="noreferrer">{repo.url}</a>
         </div>
         <ul>
-          <div>
+          <li>
             <label>Created At</label>
-            <li>{created ? created : null}</li>
-          </div>
-          <div>
+            <p>{created ? created : null}</p>
+          </li>
+          <li>
             <label>Pushed At</label>
-            <li>{pushed ? pushed : null}</li>
-          </div>
-          <div>
+            <p>{pushed ? pushed : null}</p>
+          </li>
+          <li>
             <label>Updated At</label>
-            <li>{updated ? updated : null}</li>
-          </div>
+            <p>{updated ? updated : null}</p>
+          </li>
         </ul>
       </section>
     </>

@@ -1,9 +1,11 @@
 import { useReducer, useCallback } from "react";
 
+// This is the state initial data
 const initialState = {
   isLoading: false,
   error: { hasError: false, message: "" },
 };
+
 
 const fetchReducer = (state, action) => {
   if (action.type === "LOADING") {
@@ -16,12 +18,15 @@ const fetchReducer = (state, action) => {
 };
 
 const useFetch = () => {
+  // Managing state
   const [fetchState, dispatchFn] = useReducer(fetchReducer, initialState);
 
+  // A function to hide error modal
   const closeError = () => {
     dispatchFn({ type: "ERROR", value: { hasError: false, message: "" } });
   };
 
+  // A function to fetch data
   const fetchRequest = useCallback(
     async (requestConfig, getQuestionsFromRequest = () => {}) => {
       dispatchFn({ type: "LOADING", value: true });

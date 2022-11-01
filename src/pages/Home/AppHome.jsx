@@ -5,14 +5,18 @@ import useFetch from "../../hooks/useFetch";
 import { DataContext } from "../../store/DataContext";
 
 const AppHome = () => {
+  // Consuming the context created
   const { addReposHandler, addUserHandler } = useContext(DataContext);
+
+  // Consuming the custom hook created
   const { fetchRequest } = useFetch();
 
   useEffect(() => {
+    // This is the function that will get list of repositories from the custom hook to avoid infinite loop.
     const getFetchedData = (data) => {
       addReposHandler(data);
     };
-
+    // This is the function that will get user details from the custom hook to avoid infinite loop.
     const getUserData = (data) => {
       addUserHandler(data);
     };

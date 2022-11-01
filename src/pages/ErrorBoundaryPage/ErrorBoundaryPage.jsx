@@ -3,7 +3,10 @@ import Button from "../../components/UI/Button/Button";
 import Card from "../../components/UI/Card/Card";
 
 const ErrorBoundaryPage = (props) => {
+  // Managing state
   const [content, setContent] = useState("Joel");
+
+  // An error will occur if content data type is anything apart from String
   return (
     <>
       <div className="error__boundary--title">Test Error Boundary Page</div>
@@ -14,8 +17,8 @@ const ErrorBoundaryPage = (props) => {
         </h1>
         <h2>
           When you click the button below, an error will occur which will be
-          propagated to the top-most component which is the error
-          boundary component and which will then catches the error.
+          propagated to the top-most component which is the error boundary
+          component and which will then catches the error.
         </h2>
         <Button onClick={() => setContent((prev) => [])}>Start test</Button>
       </Card>

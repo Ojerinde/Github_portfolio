@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import useDate from "../../hooks/useDate";
 import { DataContext } from "../../store/DataContext";
+import useDate from "../../hooks/useDate";
 
 const UserDetails = () => {
+  // Consuming the created context as well as Destructuring and given it an alias
   const { userDetails: user } = useContext(DataContext);
-
   const created = useDate(user?.created_at);
 
   return (
