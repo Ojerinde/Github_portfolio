@@ -39,6 +39,14 @@ const AppHome = () => {
 
   return (
     <>
+      {/* SEO optimazation */}
+      <Helmet>
+        <title>Home</title>
+        <meta name="description" content="Portfolio homepage" />
+        <link rel="canonical" href="/home" />
+      </Helmet>
+
+      {/* This enables the nested route(s) to show */}
       <Outlet />
     </>
   );

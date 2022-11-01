@@ -9,6 +9,17 @@ const ErrorBoundaryPage = (props) => {
   // An error will occur if content data type is anything apart from String
   return (
     <>
+      {/* SEO optimazation */}
+      <Helmet>
+        <title>ErrorBoundary</title>
+        <meta
+          name="description"
+          content="The page to test the functionality of the ErrorBoundary component"
+        />
+        <link rel="canonical" href="/errorboundary" />
+      </Helmet>
+
+      {/* Application */}
       <div className="error__boundary--title">Test Error Boundary Page</div>
       <Card className="error__boundary--page">
         <h1>
