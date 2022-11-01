@@ -17,7 +17,7 @@ const RightAlignedRepo = (props) => {
         </p>
         <Button onClick={buttonHandler}>See more details</Button>
       </div>
-      <h1>{props.index}</h1>
+      <h2>{props.index}</h2>
     </li>
   );
 };

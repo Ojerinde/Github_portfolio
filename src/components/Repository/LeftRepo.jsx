@@ -8,7 +8,7 @@ const LeftAlignedRepo = (props) => {
   };
   return (
     <li className="repo left__repo">
-      <h1>{props.index}</h1>
+      <h2>{props.index}</h2>
       <div>
         <h3>{props.name}</h3>
         <p>

@@ -1,6 +1,9 @@
 import { Outlet } from "react-router-dom";
 import { useContext, useEffect } from "react";
 
+import { Helmet } from "react-helmet-async";
+
+
 import useFetch from "../../hooks/useFetch";
 import { DataContext } from "../../store/DataContext";
 

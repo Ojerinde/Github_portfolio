@@ -29,7 +29,7 @@ const Repositories = () => {
   if (isLoading) return <LoadingSpinner />;
   return (
     <ul className="repo__box">
-      <h4>My repositories</h4>
+      <h2>My repositories</h2>
       {!isLoading && error.hasError && <Error message={error.message} />}
       {repos.length > 0 ? (
         repos.slice(start, end).map((repo, index) => {
