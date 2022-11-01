@@ -3,7 +3,7 @@ const Header = () => {
     <header className="home__header">
       <div>
         <h1>
-          Hi, I am <span>Joel        </span>
+          Hi, I am <span>Joel</span>
         </h1>
         <p>
           I am a Software Engineer <span>and</span> <br /> an Electrical and
