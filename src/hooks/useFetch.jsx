@@ -32,35 +32,42 @@ const useFetch = () => {
       dispatchFn({ type: "LOADING", value: true });
       dispatchFn({ type: "ERROR", value: { hasError: false, message: "" } });
       try {
+        // Fetching data using the configuration provided
         const response = await fetch(requestConfig.url, {
           method: requestConfig.method ? requestConfig.method : "GET",
           body: requestConfig.body ? JSON.stringify(requestConfig.body) : null,
           headers: requestConfig.headers ? requestConfig.headers : {},
         });
 
-        if (response.ok) {
+        // If the response is not ok, throw an error
+        if (!response.ok) {
           throw new Error(`${requestConfig.errorMessage}`);
         }
 
+        // If the response is ok, get the data
         const responseBody = await response.json();
 
+        // Send the data to the function that will use it
         getRequestData(responseBody);
         
       } catch (err) {
+        // If an error occured, set the error state
         dispatchFn({
           type: "ERROR",
           value: { hasError: true, message: err.message || "An error ocurred" },
         });
       }
-      // After the request has been made
+      // After the request has been made, set the loading state to false
       dispatchFn({ type: "LOADING", value: false });
     },
     []
   );
 
+  // Destcturing the state
   const { isLoading, error } = fetchState;
-  console.log(fetchState);
+
+  // Returning the state and the functions
   return { isLoading, error, hideModal, fetchRequest };
 };
 export default useFetch;
-//
+
