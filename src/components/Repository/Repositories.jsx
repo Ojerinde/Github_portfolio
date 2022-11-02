@@ -58,14 +58,12 @@ const Repositories = () => {
       ) : (
         <p className="no__repo">No Repository found</p>
       )}
-      {repos.length > 0 ? (
+      {repos.length > 0 && (
         <Pagination
           totalRepo={repos.length}
           repoPerPage={repoPerPage}
           onChange={pageHandler}
         />
-      ) : (
-        ""
       )}
     </ul>
   );

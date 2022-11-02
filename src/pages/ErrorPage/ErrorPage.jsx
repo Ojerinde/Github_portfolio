@@ -25,7 +25,10 @@ const ErrorPage = () => {
       {/* Application */}
       <Card className="nopage__card">
         <h1>404 page!</h1>
-        <h2>You are seeing this page because you are not in a valid URL</h2>
+        <h2>
+          You are seeing this because you are NOT in a valid url. i.e., This
+          page does not exist.
+        </h2>
         <h3>Kindly go back to a valid url by clicking on the button below</h3>
         <Button onClick={goHomeHandler}>Go home</Button>
       </Card>

@@ -9,7 +9,7 @@ import AppHome from "./pages/Home/AppHome";
 import ErrorBoundaryPage from "./pages/ErrorBoundaryPage/ErrorBoundaryPage";
 import Button from "./components/UI/Button/Button";
 
-// Dynamic Imports
+// Dynamic Imports (Lazy -loading)
 const Home = lazy(() => import("./pages/Home/Home"));
 const RepoDetails = lazy(() => import("./components/Repository/RepoDetails"));
 const ErrorPage = lazy(() => import("./pages/ErrorPage/ErrorPage"));

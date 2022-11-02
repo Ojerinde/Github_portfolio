@@ -1,13 +1,14 @@
 .go__home {
   width: 15rem;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-top: 2rem;
+  margin-left: 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   & svg {
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 3rem;
+    width: 3rem;
     fill: $primary-light-color;
     cursor: pointer;
     transition: all 0.3s;

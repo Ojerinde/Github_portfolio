@@ -12,11 +12,11 @@ import "./Stylesheets/main.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <DataContextProvider>
-      <HelmetProvider>
+  <HelmetProvider>
+    <BrowserRouter>
+      <DataContextProvider>
         <App />
-      </HelmetProvider>
-    </DataContextProvider>
-  </BrowserRouter>
+      </DataContextProvider>
+    </BrowserRouter>
+  </HelmetProvider>
 );

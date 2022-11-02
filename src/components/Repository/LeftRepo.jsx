@@ -3,6 +3,9 @@ import Button from "../UI/Button/Button";
 
 const LeftAlignedRepo = (props) => {
   const navigate = useNavigate();
+
+    // A function handling navigation to the repo details page
+
   const buttonHandler = () => {
     navigate("/home/" + props.id);
   };

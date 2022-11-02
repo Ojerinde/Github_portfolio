@@ -26,7 +26,7 @@ const Pagination = (props) => {
     props.onChange(page + 1);
   };
 
-  // A function handling page setting by the icons
+  // A function handling page setting by clicking any of the icons
   const iconHandler = (num) => {
     props.onChange(num);
     setPage((page) => num);

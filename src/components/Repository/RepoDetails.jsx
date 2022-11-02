@@ -6,6 +6,7 @@ import { DataContext } from "../../store/DataContext";
 import { BsBackspaceFill } from "react-icons/bs";
 
 import useDate from "../../hooks/useDate";
+import Card from "../UI/Card/Card";
 
 const RepoDetails = () => {
   const navigate = useNavigate();
@@ -24,10 +25,10 @@ const RepoDetails = () => {
 
   return (
     <>
-      <div className="go__home">
+      <Card className="go__home">
         <BsBackspaceFill onClick={() => navigate("/home")} />
         <p>Back</p>
-      </div>
+      </Card>
       <section className="repo__full--details">
         <h4>More Details</h4>
         <div>
