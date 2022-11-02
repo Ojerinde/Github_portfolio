@@ -14,7 +14,7 @@
 }
 .error__message {
   color: $secondary-color;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 
@@ -30,9 +30,14 @@
 .close__message {
   position: absolute;
   right: 1.5rem;
-  top: 1rem;
+  top: 1.5rem;
   fill: $secondary-dark-color;
-  height: 0.9rem;
-  height: 0.9rem;
+  height: 1.7rem;
+  width: 1.7rem;
   cursor: pointer;
+  transition: all .3s;
+
+  &:hover {
+    fill: $secondary-color;
+  }
 }

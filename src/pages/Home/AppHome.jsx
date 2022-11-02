@@ -3,16 +3,17 @@ import { useContext, useEffect } from "react";
 
 import { Helmet } from "react-helmet-async";
 
-
 import useFetch from "../../hooks/useFetch";
 import { DataContext } from "../../store/DataContext";
+
+import Error from "../../components/UI/Error/Error";
 
 const AppHome = () => {
   // Consuming the context created
   const { addReposHandler, addUserHandler } = useContext(DataContext);
 
   // Consuming the custom hook created
-  const { fetchRequest } = useFetch();
+  const { isLoading, error, hideModal, fetchRequest } = useFetch();
 
   useEffect(() => {
     // This is the function that will get list of repositories from the custom hook to avoid infinite loop.
@@ -48,6 +49,11 @@ const AppHome = () => {
         <meta name="description" content="Portfolio homepage" />
         <link rel="canonical" href="/home" />
       </Helmet>
+
+      {/* If an error occured while fetching the reposotory */}
+      {!isLoading && error.hasError && (
+        <Error message={error.message} onClick={() => hideModal()} />
+      )}
 
       {/* This enables the nested route(s) to show */}
       <Outlet />
