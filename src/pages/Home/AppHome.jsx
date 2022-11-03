@@ -45,8 +45,8 @@ const AppHome = () => {
     <>
       {/* SEO optimazation */}
       <Helmet>
-        <title>Home</title>
-        <meta name="description" content="Portfolio homepage" />
+        <title>Ojerinde Joel's Github Repositories</title>
+        <meta name="description" content="This page contains some details and all the repositories of Ojerinde Joel" />
         <link rel="canonical" href="/home" />
       </Helmet>
 

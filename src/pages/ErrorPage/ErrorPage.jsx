@@ -14,17 +14,17 @@ const ErrorPage = () => {
     <>
       {/* SEO optimazation */}
       <Helmet>
-        <title>404</title>
+        <title>Invalid URL or Page</title>
         <meta
           name="description"
-          content="The page to test a url that doesn't exist in the application"
+          content="The url to this page doesn't exist in the application"
         />
         <link rel="canonical" href="/404page" />
       </Helmet>
 
       {/* Application */}
       <Card className="nopage__card">
-        <h1>404 page!</h1>
+        <h1>Error 404 page!</h1>
         <h2>
           You are seeing this because you are NOT in a valid url. i.e., This
           page does not exist.

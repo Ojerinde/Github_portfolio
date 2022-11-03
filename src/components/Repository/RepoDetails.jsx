@@ -5,6 +5,8 @@ import { DataContext } from "../../store/DataContext";
 
 import { BsBackspaceFill } from "react-icons/bs";
 
+import { Helmet } from "react-helmet-async";
+
 import useDate from "../../hooks/useDate";
 import Card from "../UI/Card/Card";
 
@@ -25,6 +27,17 @@ const RepoDetails = () => {
 
   return (
     <>
+      {/* SEO optimazation */}
+      <Helmet>
+        <title>More details of Ojerinde Joel Repository</title>
+        <meta
+          name="description"
+          content="This page contains more details of a a particular repository of Ojerinde Joel"
+        />
+        <link rel="canonical" href={`/home/${id}`} />
+      </Helmet>
+
+      {/* Application */}
       <Card className="go__home">
         <BsBackspaceFill onClick={() => navigate("/home")} />
         <p>Back</p>
@@ -57,7 +70,9 @@ const RepoDetails = () => {
         </div>
         <div>
           <label>Url</label>
-          <a href={`${repo.html_url}`} target='_blank' rel="noreferrer">{repo.url}</a>
+          <a href={`${repo.html_url}`} target="_blank" rel="noreferrer">
+            {repo.url}
+          </a>
         </div>
         <ul>
           <li>

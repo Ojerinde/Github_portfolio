@@ -14,10 +14,10 @@ const ErrorBoundaryPage = (props) => {
     <>
       {/* SEO optimazation */}
       <Helmet>
-        <title>ErrorBoundary</title>
+        <title>A page to test Error Boundary component functionality</title>
         <meta
           name="description"
-          content="The page to test the functionality of the ErrorBoundary component"
+          content="This is the page to test the functionality of the ErrorBoundary component"
         />
         <link rel="canonical" href="/errorboundary" />
       </Helmet>

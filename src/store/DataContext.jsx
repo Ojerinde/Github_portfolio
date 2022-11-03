@@ -9,7 +9,7 @@ export const DataContext = React.createContext({
   addUserHandler: () => {},
 });
 
-// Creting the context created provider
+// Creating the context created provider
 const DataContextProvider = (props) => {
   // Managing states
   const [fetchedRepo, setFetchedRepo] = useState([]);
