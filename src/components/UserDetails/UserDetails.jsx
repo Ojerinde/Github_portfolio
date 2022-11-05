@@ -5,6 +5,8 @@ import useDate from "../../hooks/useDate";
 const UserDetails = () => {
   // Consuming the created context as well as Destructuring and given it an alias
   const { userDetails: user } = useContext(DataContext);
+
+  // Formatting the date using the custom function
   const created = useDate(user?.created_at);
 
   return (

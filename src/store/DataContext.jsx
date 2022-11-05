@@ -9,19 +9,20 @@ export const DataContext = React.createContext({
   addUserHandler: () => {},
 });
 
-// Creating the context created provider
+// Creating a component that will provide the context.
 const DataContextProvider = (props) => {
   // Managing states
   const [fetchedRepo, setFetchedRepo] = useState([]);
   const [userDetails, setUserDetails] = useState([]);
 
-  // Functions to updates states
+  // Functions to updates states. useCallback ensures that the functions are memoized.
   const addReposHandler = useCallback((data) => {
     const formattedData = data.reverse().map((repo, index) => {
       return { ...repo, number: index };
     });
     setFetchedRepo(formattedData);
   }, []);
+  
   const addUserHandler = useCallback((data) => {
     setUserDetails(data);
   }, []);

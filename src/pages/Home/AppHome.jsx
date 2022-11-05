@@ -1,26 +1,29 @@
 import { Outlet } from "react-router-dom";
 import { useContext, useEffect } from "react";
 
+// SEO
 import { Helmet } from "react-helmet-async";
 
+// Custom hook
 import useFetch from "../../hooks/useFetch";
 import { DataContext } from "../../store/DataContext";
 
 import Error from "../../components/UI/Error/Error";
 
 const AppHome = () => {
-  // Consuming the context created
+  // Consuming the application wide state data
   const { addReposHandler, addUserHandler } = useContext(DataContext);
 
   // Consuming the custom hook created
   const { isLoading, error, hideModal, fetchRequest } = useFetch();
 
   useEffect(() => {
-    // This is the function that will get list of repositories from the custom hook to avoid infinite loop.
+    // This is the function that will get list of repositories from the custom hook and avoid infinite loop.
     const getFetchedData = (data) => {
       addReposHandler(data);
     };
-    // This is the function that will get user details from the custom hook to avoid infinite loop.
+
+    // This is the function that will get user details from the custom hook and avoid infinite loop.
     const getUserData = (data) => {
       addUserHandler(data);
     };
@@ -32,6 +35,7 @@ const AppHome = () => {
       },
       getFetchedData
     );
+
     fetchRequest(
       {
         url: "https://api.github.com/users/Ojerinde",
@@ -50,7 +54,7 @@ const AppHome = () => {
         <link rel="canonical" href="/home" />
       </Helmet>
 
-      {/* If an error occured while fetching the reposotory */}
+      {/* If an error occured while fetching the reposotories */}
       {!isLoading && error.hasError && (
         <Error message={error.message} onClick={() => hideModal()} />
       )}

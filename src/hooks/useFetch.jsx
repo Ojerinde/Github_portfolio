@@ -6,7 +6,7 @@ const initialState = {
   error: { hasError: false, message: "" },
 };
 
-
+// This is the function that will be dispatched whenever an action is dispatched.
 const fetchReducer = (state, action) => {
   if (action.type === "LOADING") {
     return { ...state, isLoading: action.value };

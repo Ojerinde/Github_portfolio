@@ -9,6 +9,7 @@ const useDate = (data) => {
     year: "numeric",
     weekday: "short",
   };
+  // etting the browser location
   const locale = navigator.language;
   const formattedDate = new Intl.DateTimeFormat(locale, options).format(now);
 

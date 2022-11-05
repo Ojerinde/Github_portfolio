@@ -9,7 +9,7 @@ const ErrorBoundaryPage = (props) => {
   // Managing state
   const [content, setContent] = useState("Joel");
 
-  // An error will occur if content data type is anything apart from String
+  // An error will occur if content data type is set to anything apart from String
   return (
     <>
       {/* SEO optimazation */}
